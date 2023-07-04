@@ -3,6 +3,7 @@ package com.adminportal.controller;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -58,7 +59,8 @@ public class BookController {
 
 	@GetMapping("/bookList")
 	public String bookList(Model model) {
-
+		List<Book> bookList = bookService.findAll();
+		model.addAttribute("bookList", bookList);
 		return "bookList";
 	}
 }
