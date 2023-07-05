@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.adminportal.domain.Book;
@@ -62,5 +63,21 @@ public class BookController {
 		List<Book> bookList = bookService.findAll();
 		model.addAttribute("bookList", bookList);
 		return "bookList";
+	}
+
+	@GetMapping("/bookInfo")
+	public String boojInfo(@RequestParam("id") Long id, Model model) {
+		Book book = bookService.fineOne(id);
+
+		model.addAttribute("book", book);
+		return "bookInfo";
+	}
+
+	@GetMapping("/updateBook")
+	public String updateBook(@RequestParam("id") Long id, Model model) {
+		Book book = bookService.fineOne(id);
+
+		model.addAttribute("book", book);
+		return "updateBook";
 	}
 }
