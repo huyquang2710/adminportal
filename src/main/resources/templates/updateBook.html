@@ -16,7 +16,9 @@
 							required field</span>
 					</legend>
 
-
+					<!-- id -->
+					<input hidden="hidden" name="id" th:value="${book.id}">
+					
 					<!-- title -->
 					<div class="form-group">
 						<label class="col-md-2 control-label" for="title">* Title</label>
@@ -141,7 +143,7 @@
 						<div class="col-md-8">
 							<div class="input-group">
 								<input th:value="${book.shippingWeight}" type="number"
-									name="shippingWeight" class="form-control" id="shippingWeight"
+									name="shippingWeight" class="form-control" id="shippingWeight" step="0.01"
 									placeholder="Shipping Weight" /> <span
 									class="input-group-addon">Ounces</span>
 							</div>
@@ -157,7 +159,7 @@
 							<div class="input-group">
 								<span class="input-group-addon">$</span> <input
 									th:value="${book.listPrice}" type="number" name="listPrice"
-									class="form-control" id="listPrice" placeholder="List Price" />
+									class="form-control" id="listPrice" placeholder="List Price" step="0.01" />
 							</div>
 							<span class="help-block">List price of the book</span>
 						</div>
@@ -171,7 +173,7 @@
 							<div class="input-group">
 								<span class="input-group-addon">$</span> <input
 									th:value="${book.ourPrice}" type="number" name="ourPrice"
-									class="form-control" id="ourPrice" placeholder="Our Price" />
+									class="form-control" id="ourPrice" placeholder="Our Price" step="0.01" />
 							</div>
 							<span class="help-block">Our price of the book</span>
 						</div>
