@@ -12,6 +12,12 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- data table -->
+<link th:href="@{/css/jquery.dataTables.min.css}" rel="stylesheet" />
+<link th:href="@{/css/dataTables.bootstrap.min.css}" rel="stylesheet" />
+
+<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
 
 	<!-- Custom styles for this template -->
 	<link href="/css/style.css" rel="stylesheet">
@@ -68,6 +74,17 @@
 					.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
 		</script>
 		<script src="/js/bootstrap.min.js"></script>
+		
+		<script
+		src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+	<script>
+		tinymce.init({
+			selector : '#mytextarea'
+		});
+	</script>
+			<!-- data table -->
+		<script th:src="@{/js/jquery.dataTables.min.js}"></script>
+		<script th:src="@{/js/dataTables.bootstrap.min.js}"></script>
 	</div>
 	<!-- fragment body-bottom-scripts end -->
 </body>

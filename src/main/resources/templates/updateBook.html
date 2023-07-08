@@ -207,8 +207,8 @@
 					<div class="form-group">
 						<label class="col-md-2 control-label" for="description">Description</label>
 						<div class="col-md-8">
-								<textarea  name="description" rows="5" class="form-control"
-								id="description" th:value="${book.description}" th:text="${book.description}"
+								<textarea  name="description" rows="8" style="visibility: hidden; height: 266px;" class="form-control"
+								id="mytextarea" th:value="${book.description}" th:text="${book.description}"
 								placeholder="Description"></textarea>
 							<span class="help-block">Description of the book</span>
 						</div>
